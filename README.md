@@ -14,7 +14,7 @@ GoTodo is a simple task management API built using Go, Gin for routing, and GORM
 - [License](#license)
 
 
-##Installation
+## Installation
 
 To get started with GoTodo, you need to have Go installed on your machine. You can download and install Go from [here](https://golang.org/dl/).
 
@@ -38,7 +38,7 @@ Ensure you have PostgreSQL installed and running. Create a new database:
 CREATE DATABASE gotodo;
 ```
 
-###Create the .env file:
+### Create the .env file:
 Create a `.env` file in the root directory with the following content:
 
 ```makefile
@@ -50,15 +50,15 @@ DB_NAME=gotodo
 ```
 Replace `yourpassword` with your PostgreSQL user password.
 
-##Configuration
+## Configuration
 
 Database Configuration: The API uses environment variables for database connection settings. Ensure that your .env file contains the correct information for your PostgreSQL instance.
 
 TimeZone: The database connection string includes TimeZone=Africa/Lagos. Modify it in the db.go file if you need to use a different timezone.
 
-##Usage
+## Usage
 
-###API Endpoints
+### API Endpoints
 Create a Task
 
 POST /todos
@@ -114,7 +114,7 @@ Delete a Task
         - 404 Not Found: Task with the specified ID does not exist.
         - 500 Internal Server Error: Failed to delete the task.
 
-##Running the Project
+## Running the Project
 Build and Run:
 
 You can build and run the project using the following command:
