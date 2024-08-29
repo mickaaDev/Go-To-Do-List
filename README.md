@@ -94,12 +94,12 @@ Update a Task
 
     PUT `/todos/:id`
         Body:
-        ```json
+```json
         {
     "title": "Updated Title",
     "description": "Updated Description",
     "completed": true
-    }```
+}```
 
     Response:
         - 200 OK: Task updated successfully.
