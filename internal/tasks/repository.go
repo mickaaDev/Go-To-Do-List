@@ -4,6 +4,7 @@ package tasks
 import (
 	"Album/internal/db"
 	"fmt"
+	"log"
 	"net/http"
 	"strconv"
 
@@ -23,10 +24,10 @@ func getAllTasks(c *gin.Context) {
 
 func createTaskInDB(task *Task) error {
 	if err := db.Database.Create(task).Error; err != nil {
-		panic(err)
-	} else {
+		log.Printf("Error creating task: %v", err)
 		return err
 	}
+	return nil
 }
 
 func updateTaskById(id int, todo Task) error {

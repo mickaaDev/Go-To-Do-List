@@ -1,10 +1,8 @@
 // Task model definition
 package tasks
 
+import "Album/internal/shared"
+
 type Task struct {
-	Id          int    `gorm:"primaryKey" json:"id"`
-	Title       string `json:"title" validate:"required"`
-	Description string `json:"description"`
-	Completed   bool   `json:"completed"`
-	UserID      uint   `json:"user_id"`
+	shared.Task
 }
